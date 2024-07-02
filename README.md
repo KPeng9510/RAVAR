@@ -13,6 +13,11 @@
 ## 🤖 Model Architecture
 ![Model_architecture](https://github.com/KPeng9510/RAVAR/blob/main/main.png)
 
+## 📈 Results
+<div align="center">
+<img src="https://github.com/KPeng9510/RAVAR/blob/main/results.png" width="70%" />
+</div>
+
 ## 📚 Dataset Download
 - Link (TODO)
 
