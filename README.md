@@ -32,4 +32,11 @@ TODO
 Please consider citing this paper if you use the ```code``` or ```data``` from our work.
 Thanks a lot :)
 
-TODO
+```
+@inproceedings{peng2024ravar,
+  title={Referring Atomic Video Action Recognition},
+  author={Kunyu Peng and Jia Fu and Kailun Yang and Di Wen and Yufan Chen and Ruiping Liu and Junwei Zheng and Jiaming Zhang and M. Saquib Sarfraz and Rainer Stiefelhagen and Alina Roitberg},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  year={2024}
+}
+```
