@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/version-1.0.1-blue)
 [![arxiv badge](https://img.shields.io/badge/arxiv-red)](https://arxiv.org/abs/2407.01872)
-[![ECCV](https://img.shields.io/badge/ECCV-2024-%23f1592a?labelColor=%23003973&color=%23be1c1a)](TODO)
+[![ECCV](https://img.shields.io/badge/ECCV-2024-%23f1592a?labelColor=%23003973&color=%23be1c1a)](https://arxiv.org/abs/2407.01872)
 
 ### Kunyu Peng*, Jia Fu*, Kailun Yang°, Di Wen, Yufan Chen, Ruiping Liu, Junwei Zheng, Jiaming Zhang, M. Saquib Sarfraz, Rainer Stiefelhagen, and Alina Roitberg
 
