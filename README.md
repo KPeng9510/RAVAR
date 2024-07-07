@@ -19,7 +19,9 @@
 </div>
 
 ## 📚 Dataset Download
-- Link (TODO)
+- Please first download the original AVA dataset following the instruction from https://github.com/kevinlin311tw/ava-dataset-tool
+
+- Please download our textual annotation from https://drive.google.com/drive/folders/1XBJe7MsKTQxdWpivdOJ0AtbWQJ89JbTv?usp=drive_link
 
 ## 🎨 Training & Testing
 
