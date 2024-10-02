@@ -1,0 +1,111 @@
+import torchtext
+from torchtext.functional import to_tensor as to_tensor_text
+from torchtext.models import RobertaEncoderConf, RobertaBundle, RobertaClassificationHead
+xlmr_base = torchtext.models.XLMR_BASE_ENCODER
+model = xlmr_base.get_model()
+text_encode = xlmr_base.transform()
+import torch
+import pickle as pkl
+label_list = [
+"person",
+"bicycle",
+"car",
+"motorcycle",
+"airplane",
+"bus",
+"train",
+"truck",
+"boat",
+"traffic light",
+"fire hydrant",
+"street sign",
+"stop sign",
+"parking meter",
+"bench",
+"bird",
+"cat",
+"dog",
+"horse",
+"sheep",
+"cow",
+"elephant",
+"bear",
+"zebra",
+"giraffe",
+"hat",
+"backpack",
+"umbrella",
+"shoe",
+"eye glasses",
+"handbag",
+"tie",
+"suitcase",
+"frisbee",
+"skis",
+"snowboard",
+"sports ball",
+"kite",
+"baseball bat",
+"baseball glove",
+"skateboard",
+"surfboard",
+"tennis racket",
+"bottle",
+"plate",
+"wine glass",
+"cup",
+"fork",
+"knife",
+"spoon",
+"bowl",
+"banana",
+"apple",
+"sandwich",
+"orange",
+"broccoli",
+"carrot",
+"hot dog",
+"pizza",
+"donut",
+"cake",
+"chair",
+"couch",
+"potted plant",
+"bed",
+"mirror",
+"dining table",
+"window",
+"desk",
+"toilet",
+"door",
+"tv",
+"laptop",
+"mouse",
+"remote",
+"keyboard",
+"cell phone",
+"microwave",
+"oven",
+"toaster",
+"sink",
+"refrigerator",
+"blender",
+"book",
+"clock",
+"vase",
+"scissors",
+"teddy bear",
+"hair drier",
+"toothbrush",
+"None",]
+emb_list = []
+for l in label_list:
+    with torch.no_grad():
+        vectors = model(to_tensor_text(text_encode([l])))
+        vectors.requires_grad = False
+        pairs_text = torch.Tensor(vectors[0]).mean(0)
+        emb_list.append(pairs_text)
+emb_list = torch.stack(emb_list,0)
+f = open("worlds_feature.pkl", "wb")
+pkl.dump(file=f, obj=emb_list)
+f.close()
